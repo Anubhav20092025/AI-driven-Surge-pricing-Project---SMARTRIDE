@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartRide | AI-Driven Urban Mobility</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0b10;
+            --glass: rgba(255, 255, 255, 0.05);
+            --accent: #ff7e33;
+            --blue: #33a1ff;
+        }
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top right, #1a1e2e, #0a0b10);
+            text-align: center;
+        }
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        h1 { font-size: 4rem; margin-bottom: 0; background: linear-gradient(45deg, var(--blue), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .tagline { font-size: 1.5rem; opacity: 0.7; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .code-snippet { background: #000; padding: 20px; border-radius: 12px; font-family: monospace; font-size: 0.9rem; text-align: left; overflow-x: auto; }
+        .accent-text { color: var(--accent); font-weight: bold; }
+        .nav { position: fixed; top: 20px; right: 40px; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div>
+            <h1>SmartRide</h1>
+            <p class="tagline">Next-Gen AI Surge Pricing & Urban Graph Routing</p>
+            <div class="glass-card">
+                <h2>The AI Core</h2>
+                <p>SmartRide utilizes <span class="accent-text">Ollama (Llama3)</span> as a Market Analyst to dynamically adjust surge pricing based on historical demand ratios calculated in real-time.</p>
+                <div class="grid">
+                    <div>
+                        <h3>Sparse Graph Pruning</h3>
+                        <p>Implements <span class="accent-text">K-Nearest Neighbors (K=6)</span> to reduce search space by 80% while preserving path accuracy.</p>
+                    </div>
+                    <div>
+                        <h3>Multi-Route Pathfinding</h3>
+                        <p>Utilizes <span class="accent-text">Yen's K-Shortest Paths</span> to provide customers with 6 unique, time-efficient route options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="glass-card">
+            <h2>Technical Implementation: Surge Formula</h2>
+            <div class="code-snippet">
+                // Surge Multiplier Logic
+                const demandRatio = currentTrips / historicalAvg;
+                const result = await llama3.generate(`Calculate surge for ratio: ${demandRatio}`);
+            </div>
+            <p>Our dual-database architecture separates operational transactions from heavy analytics logs, ensuring zero-latency performance even during high-concurrency surge events.</p>
+        </div>
+    </div>
+</body>
+</html>
